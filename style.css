@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Amiri', serif;
+}
+
+.topnav {
+    background-color: #ffdb9d;
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: #8f2829; /* Link color */
+    align-items: center; /* Center vertically */
+    align-content: center; /* Center content */
+    text-align: center; /* Center text */
+    padding: 30px 30px; /* Increased padding for larger clickable area */
+    text-decoration: none;
+    font-size: 25px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: #475a16;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #475a16;
+    color: rgb(255, 255, 255);
+}
+/* Change the color of the active link on hover */
+.topnav a.active:hover{
+    background-color: #b73739;
+    transition: background-color 0.3s; 
+}
+
+/* Inicio */
+#inicio{
+    height: 600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/L8NVuGZ.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /*flexbox centering*/
+    display: flex;                
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.3s ease;
+}
+
+#inicio.blurred {
+    filter: blur(5px);
+}
+
+#inicio p{
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+#button-login{
+    background-color: #1b1b1b69;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#button-login:hover{
+    background-color: #272727af;
+    transition: background-color 0.5s; 
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-modal:hover {
+    color: #ff0000;
+}
+
+/* Form Styles */
+.form-box {
+    display: none;
+}
+
+.form-box.active {
+    display: block;
+}
+
+.form-box h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    background: #f1f1f1;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.form-box button:hover {
+    background: #45a049;
+}
+
+.form-box p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-box p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.form-box p a:hover {
+    text-decoration: underline;
+}
+
+/*modal animation*/
+
+
+/* Footer */
+#footer {
+    background-color: #3e1c1c;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #ffffff;
+}
