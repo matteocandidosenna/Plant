@@ -9,14 +9,21 @@
 
 /*Navbar*/
 #topnav {
-    background-color: #ffdb9d;
-    font-family: 'Times New Roman', Times, serif;
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-color: #F79A19;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 135px;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 
 
 #topnav a {
@@ -47,8 +54,8 @@
 
 /* Inicio */
 #inicio{
-    height: 600px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/L8NVuGZ.jpeg');
+    height: 650px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://cdn.pixabay.com/photo/2023/12/24/15/03/bougainvillea-8467373_1280.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -97,6 +104,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 10;
 }
 
 .modal.active {
@@ -155,7 +163,62 @@
 /*----------------------------------------*/
 
 #news{
-    padding: 50px;
+    display: flex;
+    padding: 60px;
     text-align: center;
-    height: 300px;
+    height: 600px;
+    align-items: right;
+    align-items: center;
+    background-color: #F79A19,;
+    color:rgb(0, 0, 0);
+    display: flex;
+    padding: 70px;
+    align-items: center; /* Centraliza tudo verticalmente */
+    justify-content: center;
+
 }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
+    border-radius: 10px;
+    margin: -35px;
+    background-color: #f8f8f8;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+#arriba{
+    z-index: 1;
+}
+
+#abajo{
+    z-index: 0;
+    height: 80%;
+}
+
+.texto-esquerdado {
+    margin-right: 170px; 
+    text-align: left;
+    max-width: 300px; /* Ajuste a largura do texto como quiser */
+}
+
+/*footer*/
+
+#footer{
+    background-color: #1b1b1b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height:300px;
+}
+
+/*----------------------------------------*/
+

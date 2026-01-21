@@ -39,3 +39,31 @@ window.addEventListener('click', (e) => {
         e.target.classList.remove('active');
     }
 });
+
+
+//--------------------------------------------------------------
+// NAVBAR SCROLL BEHAVIOR
+const navbar = document.getElementById('topnav');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+        navbar.style.transform = 'translateY(0)';
+        navbar.style.opacity = '1';
+        return;
+    }
+
+    if (currentScroll > lastScroll) {
+        // scroll para baixo → esconde
+        navbar.style.transform = 'translateY(-100%)';
+        navbar.style.opacity = '0';
+    } else {
+        // scroll para cima → mostra
+        navbar.style.transform = 'translateY(0)';
+        navbar.style.opacity = '1';
+    }
+
+    lastScroll = currentScroll;
+});
