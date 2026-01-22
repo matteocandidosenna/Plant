@@ -13,6 +13,7 @@ html {
 
 /*Navbar*/
 #topnav {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -58,8 +59,9 @@ html {
 
 /* Inicio */
 #inicio{
+    display: flex;
     height: 900px;
-    background-image: linear-gradient(#745b004a, #000000), url('https://cdn.pixabay.com/photo/2020/05/25/18/35/bee-5219887_1280.jpg');
+    background-image: linear-gradient(#745b005f, #000000), url('https://cdn.pixabay.com/photo/2020/05/25/18/35/bee-5219887_1280.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -169,14 +171,12 @@ html {
 
 #news{
     display: flex;
-    padding: 60px;
     text-align: center;
     height: 600px;
     align-items: right;
-    align-items: center;
     color:rgb(16, 16, 16);
     display: flex;
-    padding: 70px;
+    padding: 200px;
     align-items: center; /* Centraliza tudo verticalmente */
     justify-content: center;
     background-color: #000000;
