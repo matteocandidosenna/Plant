@@ -15,7 +15,7 @@
     width: 100%;
     z-index: 1000;
 
-    background-color: #F79A19;
+    background-color: #e68600;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,7 @@
 
 
 #topnav a {
-    color: #8f2829; /* Link color */
+    color: beige; /* Link color */
     align-items: center; /* Center vertically */
     align-content: center; /* Center content */
     text-align: center; /* Center text */
@@ -41,7 +41,7 @@
 }
 
 #topnav a.active {
-    background-color: #475a16;
+    background-color: #1f5802;
     color: rgb(255, 255, 255);
 }
 
@@ -54,11 +54,12 @@
 
 /* Inicio */
 #inicio{
-    height: 650px;
+    height: 900px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://cdn.pixabay.com/photo/2023/12/24/15/03/bougainvillea-8467373_1280.jpg');
     background-size: cover;
     background-position: center;
     color: white;
+
     /*flexbox centering*/
     display: flex;                
     flex-direction: column;
@@ -169,12 +170,12 @@
     height: 600px;
     align-items: right;
     align-items: center;
-    background-color: #F79A19,;
-    color:rgb(0, 0, 0);
+    color:rgb(16, 16, 16);
     display: flex;
     padding: 70px;
     align-items: center; /* Centraliza tudo verticalmente */
     justify-content: center;
+    background-color: #410e0f;
 
 }
 
@@ -213,11 +214,11 @@
 /*footer*/
 
 #footer{
-    background-color: #1b1b1b;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 20px;
-    height:300px;
+    height:180px;
 }
 
 /*----------------------------------------*/
