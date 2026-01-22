@@ -29,8 +29,6 @@ html {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
-
 #topnav a {
     color: beige; /* Link color */
     align-items: center; /* Center vertically */
@@ -60,7 +58,7 @@ html {
 /* Inicio */
 #inicio{
     display: flex;
-    height: 900px;
+    height: 800px;
     background-image: linear-gradient(#745b005f, #000000), url('https://cdn.pixabay.com/photo/2020/05/25/18/35/bee-5219887_1280.jpg');
     background-size: cover;
     background-position: center;

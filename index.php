@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant</title>
+
+    <!-- Add icon link -->
+    <link rel="icon" href="https://i.imgur.com/7I8qh4p.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <section id="topnav">
+        <a class="active" href="#inicio"><img src="https://i.imgur.com/7I8qh4p.png" width="40px"><br style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Plant</a>
+        <a href="#news" class="'NotAct">NEWS</a>
+        <a href="#contact" class="'NotAct">CONTACT</a>
+        <a href="#footer" class="'NotAct">ABOUT</a>
+    </section>
+
+    <section id="inicio">
+        <img src="https://i.imgur.com/7I8qh4p.png" style="width: 10%;">
+        <h1>Organize, registre, acompanhe sua planta</h1>
+        <p>Aqui, criadores de plantas podem guardar registros, fotos, consultar informações e guias para o cultivo de suas plantas</p>
+        <button id="button-login">Login / Register</button>
+    </section>
+
+    <div id="modalLogin" class="modal">
+        <div class="modal-content" id="login-form">
+            <span class="close">&times;</span>
+            <form action="login_register.php" method="post">
+                <h2>Login</h2>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" name="login">Login</button>
+                <p>Don't have an account? <a href="#" id="reg">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalRegister" class="modal">
+        <div class="modal-content" id="register-form">
+            <span class="close">&times;</span>
+            <form action="login_register.php" method="post">
+                <h2>Register</h2>
+                <input type="name" name="name" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <select name="role" required>
+                    <option value="">--Select Role---</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <button type="submit" name="register">Register</button>
+                <p>Already have an account? <a href="#" id="log">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <section id="news">
+
+        <div class="texto-esquerdado">
+            <h1 style="margin-left: -180px; color: beige;">Organize sua rotina</h1>
+            <ul>
+                <style>
+                    .texto-esquerdado li{
+                        margin-left: -130px;
+                        font-size: 20px;
+                        color: beige;
+                    }
+                </style>
+                <li>Crie seu jardim virtual;</li>
+                <li>Pergunte ao chatbot perguntas específicas;</li>
+                <li>Cheque a qualidade da sua planta;</li>
+                <li>Descubra a espécie de qualquer planta</li>
+            </ul>
+        </div>
+
+         <div class="card" id="mezo">
+            <img src="https://cdn.pixabay.com/photo/2023/06/13/20/53/sunflower-8061822_1280.png" alt="Avatar" style="width:100%; border-radius: 10px 10px 0 0;">
+            <div class="container">
+                <h4><b>Plantações</b></h4> 
+                <p>De girassol até milho</p>
+            </div>
+        </div>
+
+        <div class="card" id="terza">
+            <img src="https://cdn.pixabay.com/photo/2020/09/14/15/10/birch-tree-5571242_1280.png" alt="Avatar" style="width:100%; border-radius: 10px 10px 0 0;">
+            <div class="container">
+                <h4><b>Árvores</b></h4> 
+                <p>Frutíferas e de sombra</p> 
+            </div>
+        </div>
+        
+        <div class="card" id="arriba">
+            <img src="https://cdn.pixabay.com/photo/2024/01/04/09/34/plant-8486960_1280.png" alt="Avatar" style="width:100%; border-radius: 10px 10px 0 0;">
+            <div class="container">
+                <h4><b>Plantas Ornamentais</b></h4> 
+                <p>De vazo e parede</p>
+            </div>
+        </div>
+
+        
+
+    </section>
+
+    <section id="footer">
+        <p style="color: beige">Autor: Matheus Candido</p>
+        <a href="mailto:matteocandidosenna@gmail.com" style="color: beige">matteocandidosenna@gmail.com</a><br>
+        <div class="social-icons">
+            <a href="" class="social-icon"><i class="fab fa-youtube fa-2x" style="color: beige"></i></a>
+            <a href="https://www.linkedin.com/in/matheuscandidosenna/" class="social-icon" style="color: beige"><i class="fab fa-linkedin fa-2x" style="width: 50px;"></i></a>
+            <a href="https://github.com/matteocandidosenna" class="social-icon" style="color: beige;"><i class="fab fa-github fa-2x"></i></a>
+        </div>
+        
+        <p style="color: beige">"Longa é a arte, tão breve a vida, querida..."</p>
+
+    </section>
+
+    <script src="script.js" defer></script>
+    
+</html>
