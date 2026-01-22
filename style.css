@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -55,7 +59,7 @@
 /* Inicio */
 #inicio{
     height: 900px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://cdn.pixabay.com/photo/2023/12/24/15/03/bougainvillea-8467373_1280.jpg');
+    background-image: linear-gradient(#745b004a, #000000), url('https://cdn.pixabay.com/photo/2020/05/25/18/35/bee-5219887_1280.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -175,7 +179,7 @@
     padding: 70px;
     align-items: center; /* Centraliza tudo verticalmente */
     justify-content: center;
-    background-color: #410e0f;
+    background-color: #000000;
 
 }
 
