@@ -19,24 +19,20 @@ html {
     left: 0;
     width: 100%;
     z-index: 1000;
-
     background-color: #e68600;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 135px;
-
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
-
 #topnav a {
-    color: beige; /* Link color */
-    align-items: center; /* Center vertically */
-    align-content: center; /* Center content */
-    text-align: center; /* Center text */
-    padding: 30px 30px; /* Increased padding for larger clickable area */
+    color: beige;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 30px 30px;
     text-decoration: none;
     font-size: 25px;
 }
@@ -65,8 +61,6 @@ html {
     background-size: cover;
     background-position: center;
     color: white;
-
-    /*flexbox centering*/
     display: flex;                
     flex-direction: column;
     justify-content: center;
@@ -103,11 +97,9 @@ html {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.5);
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -121,7 +113,7 @@ html {
 
 .modal-content {
     position: relative;
-    background: #ffffff;;
+    background: #ffffff;
     width: 500px;
     max-width: 90vw;
     padding: 20px;
@@ -174,13 +166,12 @@ html {
     text-align: center;
     height: 600px;
     align-items: right;
-    color:rgb(16, 16, 16);
+    color: rgb(16, 16, 16);
     display: flex;
     padding: 200px;
-    align-items: center; /* Centraliza tudo verticalmente */
+    align-items: center;
     justify-content: center;
     background-color: #000000;
-
 }
 
 .card {
@@ -212,18 +203,200 @@ html {
 .texto-esquerdado {
     margin-right: 170px; 
     text-align: left;
-    max-width: 300px; /* Ajuste a largura do texto como quiser */
+    max-width: 300px;
 }
 
 /*footer*/
-
 #footer{
     background-color: #000000;
     color: white;
     text-align: center;
     padding: 20px;
-    height:180px;
+    height: 180px;
 }
 
 /*----------------------------------------*/
+/* RESPONSIVIDADE - APENAS ABAIXO DO BREAKPOINT DEFINIDO */
+/*----------------------------------------*/
 
+/* BREAKPOINT: 1200px (Altere este valor conforme sua preferência) */
+@media screen and (max-width: 1200px) {
+    
+    /* Tablet - 1200px até 769px */
+    @media screen and (min-width: 769px) {
+        #topnav {
+            height: auto;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        
+        #topnav a {
+            padding: 20px 25px;
+            font-size: 22px;
+        }
+        
+        #inicio {
+            height: 700px;
+        }
+        
+        #inicio h1 {
+            font-size: 42px;
+        }
+        
+        #news {
+            padding: 80px 30px;
+            height: auto;
+            min-height: 600px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .card {
+            width: 300px;
+            margin: 0;
+        }
+        
+        .texto-esquerdado {
+            margin-right: 100px;
+        }
+    }
+    
+    /* Mobile - 768px e abaixo */
+    @media screen and (max-width: 768px) {
+        #topnav {
+            height: auto;
+            padding: 5px;
+            flex-wrap: wrap;
+        }
+        
+        #topnav a {
+            padding: 15px 15px;
+            font-size: 18px;
+        }
+        
+        #inicio {
+            height: 600px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #inicio h1 {
+            font-size: 36px;
+        }
+        
+        #inicio p {
+            font-size: 18px;
+            padding: 0 20px;
+        }
+        
+        #news {
+            flex-direction: column;
+            padding: 60px 20px;
+            height: auto;
+            min-height: 600px;
+            gap: 40px;
+        }
+        
+        .card {
+            width: 100%;
+            max-width: 400px;
+            margin: 0;
+        }
+        
+        .texto-esquerdado {
+            margin-right: 0;
+            text-align: center;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .modal-content {
+            max-width: 90%;
+        }
+    }
+    
+    /* Mobile Pequeno - 480px e abaixo */
+    @media screen and (max-width: 480px) {
+        #topnav {
+            flex-direction: column;
+            height: auto;
+            padding: 5px;
+        }
+        
+        #topnav a {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        #topnav a:last-child {
+            border-bottom: none;
+        }
+        
+        #inicio {
+            height: 500px;
+        }
+        
+        #inicio h1 {
+            font-size: 28px;
+        }
+        
+        #inicio p {
+            font-size: 16px;
+            margin: 15px 0;
+        }
+        
+        #button-login {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+        
+        #news {
+            padding: 40px 15px;
+        }
+        
+        .card {
+            width: 100%;
+        }
+        
+        .container {
+            padding: 10px;
+        }
+        
+        .modal-content {
+            padding: 15px;
+            max-width: 95%;
+        }
+        
+        .modal-content input,
+        .modal-content button {
+            padding: 8px;
+        }
+        
+        .close {
+            font-size: 24px;
+        }
+        
+        #footer {
+            height: 150px;
+            padding: 15px;
+        }
+    }
+    
+    /* Telas muito pequenas - 320px e abaixo */
+    @media screen and (max-width: 320px) {
+        #inicio h1 {
+            font-size: 24px;
+        }
+        
+        #inicio p {
+            font-size: 14px;
+        }
+        
+        #topnav a {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+}
