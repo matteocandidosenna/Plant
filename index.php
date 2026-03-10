@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +18,35 @@
 </head>
 
 <body>
+    <!-- Mensagens de feedback -->
+<?php if (isset($_SESSION['success'])): ?>
+    <div class="alert success" style="position: fixed; top: 140px; left: 50%; transform: translateX(-50%); background: #4CAF50; color: white; padding: 15px; border-radius: 5px; z-index: 1001;">
+        <?php 
+            echo $_SESSION['success']; 
+            unset($_SESSION['success']);
+        ?>
+    </div>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['error'])): ?>
+    <div class="alert error" style="position: fixed; top: 140px; left: 50%; transform: translateX(-50%); background: #f44336; color: white; padding: 15px; border-radius: 5px; z-index: 1001;">
+        <?php 
+            echo $_SESSION['error']; 
+            unset($_SESSION['error']);
+        ?>
+    </div>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['errors'])): ?>
+    <div class="alert error" style="position: fixed; top: 140px; left: 50%; transform: translateX(-50%); background: #f44336; color: white; padding: 15px; border-radius: 5px; z-index: 1001;">
+        <?php 
+            foreach ($_SESSION['errors'] as $error) {
+                echo $error . '<br>';
+            }
+            unset($_SESSION['errors']);
+        ?>
+    </div>
+<?php endif; ?>
     <section id="topnav">
         <a class="active" href="#inicio"><img src="https://i.imgur.com/7I8qh4p.png" width="40px"><br style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Plant</a>
         <a href="#news" class="'NotAct">NEWS</a>
@@ -26,7 +58,11 @@
         <img src="https://i.imgur.com/7I8qh4p.png" style="width: 10%;">
         <h1>Organize, registre, acompanhe sua planta</h1>
         <p>Aqui, criadores de plantas podem guardar registros, fotos, consultar informações e guias para o cultivo de suas plantas</p>
-        <button id="button-login">Login / Register</button>
+        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']): ?>
+            <button id="button-login" onclick="window.location.href='dashboard.php'">Dashboard</button>
+        <?php else: ?>
+            <button id="button-login">Login / Register</button>
+        <?php endif; ?>
     </section>
 
     <div id="modalLogin" class="modal">
@@ -47,7 +83,7 @@
             <span class="close">&times;</span>
             <form action="login_register.php" method="post">
                 <h2>Register</h2>
-                <input type="name" name="name" placeholder="Username" required>
+                <input type="text" name="name" placeholder="Username" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <select name="role" required>

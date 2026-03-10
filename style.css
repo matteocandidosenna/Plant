@@ -56,7 +56,7 @@ html {
 /* Inicio */
 #inicio{
     display: flex;
-    height: 800px;
+    height: 1000px;
     background-image: linear-gradient(#8669007a, #9a7e0025,  #000000), url('https://cdn.pixabay.com/photo/2020/05/25/18/35/bee-5219887_1280.jpg');
     background-size: cover;
     background-position: center;
